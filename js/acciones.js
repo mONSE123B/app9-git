@@ -1,7 +1,7 @@
 // JavaScript Document
 
 $(document).ready(function(e) {
-document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReady,false);
 
 });
 
@@ -20,15 +20,13 @@ $('#watch').on('click',function(){
 }
 
 	function getPosition() {
-
 	var options={
 		enableHighAccuracy : true,
 		maximumAge: 3600000
 	}
 
 	var watchID=navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
-
-	function onSuccess(position) {
+function onSuccess(position) {
 
 		alert('Latitude:'	+position.coords.latitude 	+'\n' +
 			'Longitude:' 	+position.coords.longitude 	+'\n' +
